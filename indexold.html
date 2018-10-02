@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+
+    <!-- Things that effect how the tab looks -->
+    <title>LO Tech: Inventory</title>
+    <link href="media/lofav.png" rel="shortcut icon">
+
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+
+    <!-- API -->
+    <script type="text/javascript" src="js/api/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/api/jquery.tablesorter.min.js"></script>
+    <script type="text/javascript" src="tablefilter/tablefilter.js"></script>
+    <!-- Functions -->
+    <script type="text/javascript" src="js/functions/loadsheet.js"></script>
+    <script type="text/javascript" src="js/functions/search.js"></script>
+    <script type="text/javascript" src="js/functions/formatElement.js"></script>
+    <script type="text/javascript" src="js/functions/experimental.js"></script>
+    <script type="text/javascript" src="js/functions/visibility.js"></script>
+    <script type="text/javascript" src="js/functions/tablefilter.js"></script>
+
+  </head>
+
+  <!-- MAIN BODY -->
+  <body id="root" style="overflow-x: hidden; overflow-y: hidden;">
+
+
+
+
+    <!-- The Loading Screen -->
+    <div id="blackout">
+
+      <!-- <div id="movingbox"></div> -->
+      <img id="loadingimg" src="media/lo.png">
+      <h1>Please Wait, Loading</h1>
+
+    </div>
+
+
+    <!-- Search Bar -->
+    <input type="text" id="SearchBar" onkeyup="find()" placeholder="Search for items">
+
+
+    <!-- The main table -->
+    <table id="table" class="container tablesorter">
+      <thead>
+        <tr>
+          <th><h1>Name</h1></th>
+          <th><h1>ID</h1></th>
+          <th><h1>Category</h1></th>
+          <th><h1>Description</h1></th>
+          <th><h1>More Info</h1></th>
+        </tr>
+      </thead>
+        <tbody id="datatable">
+          <!-- This is where the content will be appended to -->
+        </tbody>
+        <h1 id="title">LO Tech Inventory</h1>
+    </table>
+
+    <!-- Extra Data -->
+    <div id="extraData">
+      <!-- This is where the extra data will be appended to -->
+    </div>
+
+
+
+
+    <!-- Testing Sheet
+    <script src="https://spreadsheets.google.com/feeds/cells/1FS7Q15EEYDFcT5_vcPkCE85OhD0tF4b7kksUzh-Dd44/od6/public/values?alt=json-in-script&callback=insertData"></script>
+    -->
+
+
+    <!-- Load Google Sheets -->
+    <script src="https://spreadsheets.google.com/feeds/cells/1mGzL4Ap4kb0Xm0MUoZDUKcabsxPk5on-4UzMKkqlNF4/od6/public/values?alt=json-in-script&callback=insertData"></script>
+    <script src="https://spreadsheets.google.com/feeds/cells/1mGzL4Ap4kb0Xm0MUoZDUKcabsxPk5on-4UzMKkqlNF4/ob8x97u/public/values?alt=json-in-script&callback=insertData"></script>
+    <script src="https://spreadsheets.google.com/feeds/cells/1mGzL4Ap4kb0Xm0MUoZDUKcabsxPk5on-4UzMKkqlNF4/oide8um/public/values?alt=json-in-script&callback=insertData"></script>
+    <script src="https://spreadsheets.google.com/feeds/cells/1mGzL4Ap4kb0Xm0MUoZDUKcabsxPk5on-4UzMKkqlNF4/oh5ekx4/public/values?alt=json-in-script&callback=insertData"></script>
+    <script src="https://spreadsheets.google.com/feeds/cells/1mGzL4Ap4kb0Xm0MUoZDUKcabsxPk5on-4UzMKkqlNF4/og9xpl2/public/values?alt=json-in-script&callback=insertData"></script>
+    <script src="https://spreadsheets.google.com/feeds/cells/1mGzL4Ap4kb0Xm0MUoZDUKcabsxPk5on-4UzMKkqlNF4/ow4t00h/public/values?alt=json-in-script&callback=insertData"></script>
+
+  
+
+    <!-- Post Init (Run after everything else is done loading) -->
+    <script type="text/javascript" src="js/functions/postInit.js"></script>
+  
+  </body>
+</html>
